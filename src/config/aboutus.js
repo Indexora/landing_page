@@ -1,0 +1,46 @@
+export const aboutSectionConfig = {
+  id: "about",
+  eyebrow: "The Engineering Team",
+  title: "AI Engineers & Machine Learning Researchers",
+  subtitle:
+    "Indexora was built by a dedicated team of AI infrastructure specialists obsessed with high-dimensional data optimization and large-scale semantic search performance.",
+  align: "center",
+  people: [
+    {
+      id: "ai-architect",
+      name: "Leander Elias",
+      role: "Lead AI Architect",
+      imageSrc: "/person/p-1.jpg",
+      imageAlt: "Portrait of the Lead AI Architect",
+      linkedinUrl: "https://linkedin.com",
+      socialLabel: "LinkedIn",
+    },
+    {
+      id: "ml-researcher",
+      name: "Dr. Elara Vivienne",
+      role: "Machine Learning Researcher",
+      imageSrc: "/person/p4.jpg",
+      imageAlt: "Portrait of the Machine Learning Researcher",
+      linkedinUrl: "https://linkedin.com",
+      socialLabel: "LinkedIn",
+    },
+    {
+      id: "vector-engineer",
+      name: "Cassian Theodore ",
+      role: "Vector Database Engineer",
+      imageSrc: "/person/p2.jpg",
+      imageAlt: "Portrait of the Vector Database Engineer",
+      linkedinUrl: "https://linkedin.com",
+      socialLabel: "LinkedIn",
+    },
+    {
+      id: "search-scientist",
+      name: "Matilda Seraphine",
+      role: "Retrieval Scientist",
+      imageSrc: "/person/p3.jpg",
+      imageAlt: "Portrait of the Retrieval Scientist",
+      linkedinUrl: "https://linkedin.com",
+      socialLabel: "LinkedIn",
+    },
+  ],
+};
