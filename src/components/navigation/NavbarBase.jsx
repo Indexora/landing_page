@@ -40,6 +40,14 @@ import { ThemeToggle } from "../layout/ThemeToggle";
  * - showThemeToggle?: boolean
  * - className?: string
  */
+function resolveNavHref(href, pathname) {
+  if (typeof href === "string" && href.startsWith("#") && pathname && ["/product", "/Product"].includes(pathname)) {
+    return `/${href}`;
+  }
+
+  return href ?? "#";
+}
+
 export function NavbarBase({
   logo,
   navItems = [],
@@ -156,7 +164,7 @@ function DesktopNavBase({ items, pathname }) {
         return (
           <Link
             key={item.label}
-            href={item.href ?? "#"}
+            href={resolveNavHref(item.href, pathname)}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noreferrer" : undefined}
             className={cn(
@@ -173,7 +181,7 @@ function DesktopNavBase({ items, pathname }) {
   );
 }
 
-function DesktopDropdownBase({ item }) {
+function DesktopDropdownBase({ item, pathname }) {
   const children = item.children ?? [];
 
   return (
@@ -201,7 +209,7 @@ function DesktopDropdownBase({ item }) {
           {children.map((child) => (
             <Link
               key={child.label}
-              href={child.href ?? "#"}
+              href={resolveNavHref(child.href, pathname)}
               target={child.external ? "_blank" : undefined}
               rel={child.external ? "noreferrer" : undefined}
               className={cn(
@@ -273,7 +281,7 @@ function MobileNavBase({ items, cta, pathname }) {
                         {item.children.map((child) => (
                           <SheetClose asChild key={child.label}>
                             <Link
-                              href={child.href ?? "#"}
+                              href={resolveNavHref(child.href, pathname)}
                               target={child.external ? "_blank" : undefined}
                               rel={
                                 child.external ? "noreferrer" : undefined
@@ -296,7 +304,7 @@ function MobileNavBase({ items, cta, pathname }) {
               return (
                 <SheetClose asChild key={item.label}>
                   <Link
-                    href={item.href ?? "#"}
+                    href={resolveNavHref(item.href, pathname)}
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noreferrer" : undefined}
                     className={cn(

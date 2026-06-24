@@ -15,7 +15,7 @@ export const heroSectionConfig = {
     "Enhancing vector search performance, embedding management, and semantic retrieval accuracy for large-scale AI applications.",
   primaryCta: {
     label: "Vexor v1.0",
-    href: "/",
+    href: "/product",
   },
   secondaryCta: {
     label: "View Architecture",

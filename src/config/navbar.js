@@ -19,5 +19,5 @@ export const navItems = [
 
 export const cta = {
   label: "Vexor v1.0",
-  href: "#contact",
+  href: "/product",
 };
